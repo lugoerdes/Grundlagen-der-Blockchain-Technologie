@@ -43,20 +43,20 @@
 
 \DeclareOption{german}
 {
-% i18n: deutsch
-\def\uebcsassignment{\"Ubung}
-\def\uebcsexercise{Aufgabe}
-\def\uebcsgroup{Gruppe}
-\def\uebcsmatnr{Mat.-Nr.}
+  % i18n: deutsch
+  \def\uebcsassignment{\"Ubung}
+  \def\uebcsexercise{Aufgabe}
+  \def\uebcsgroup{Übungsblatt}
+  \def\uebcsmatnr{Mat.-Nr.}
 }
 
 \DeclareOption{english}
 {
-% i18n: english
-\def\uebcsassignment{Assignment}
-\def\uebcsexercise{Exercise}
-\def\uebcsgroup{Group}
-\def\uebcsmatnr{Student ID number}
+  % i18n: english
+  \def\uebcsassignment{Assignment}
+  \def\uebcsexercise{Exercise}
+  \def\uebcsgroup{Group}
+  \def\uebcsmatnr{Student ID number}
 }
 
 \ProcessOptions
@@ -66,10 +66,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newenvironment{exercise}[1]{{%
-\vspace{3ex}%
-\large%
-\noindent\textbf{\uebcsexercise\ \uebcsnr.#1}\\[1ex]%
-}}{}
+      \vspace{3ex}%
+      \large%
+      \noindent\textbf{\uebcsexercise\ \uebcsnr.#1}\\[1ex]%
+    }}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % define header
