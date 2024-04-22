@@ -153,6 +153,11 @@ OUTPUT 18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.out
 OUTPUT 18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.pdf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT ./Abbildungen/Uebungsblatt1.png
+INPUT ./Abbildungen/Uebungsblatt1.png
+INPUT ./Abbildungen/Uebungsblatt1.png
+INPUT ./Abbildungen/Uebungsblatt1.png
+INPUT ./Abbildungen/Uebungsblatt1.png
 INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT 18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.aux

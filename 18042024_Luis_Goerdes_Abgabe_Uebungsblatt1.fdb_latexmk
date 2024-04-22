@@ -1,8 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1713466798.98276 "g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/vorlage/18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.tex" "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.pdf" "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1" 1713466801.68093 0
-  "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.aux" 1713466801 257 5be5fd6c2cc7cf225596bead76801f9a "pdflatex"
-  "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.out" 1713466801 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.tex" 1713466797 3504 7bf5e830c3267f6d4120d3dd012d6f74 ""
+["pdflatex"] 1713787327.72241 "g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/vorlage/18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.tex" "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.pdf" "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1" 1713787331.8904 0
+  "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.aux" 1713787331 382 d96e3cbe14d03131d282627f7eb98436 "pdflatex"
+  "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.out" 1713787330 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.tex" 1713787283 3910 50d59a869eb4a54730eb371412a8561a ""
+  "Abbildungen/Uebungsblatt1.png" 1713785863 106686 30fa591b3c8ac76f6efd6cdcf73f0aa7 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1713136289 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1713137227 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1713136834 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -75,9 +76,9 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1713140963 5519690 1698f96789543a09b6b0e33aada59581 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1713141194 8222563 741b65d0ac63b9605bdf9b168c810179 ""
   "c:/texlive/2024/texmf.cnf" 1713140922 713 e69b156964470283e0530f5060668171 ""
-  "g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/vorlage/18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.tex" 1713466797 3504 7bf5e830c3267f6d4120d3dd012d6f74 ""
+  "g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/vorlage/18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.tex" 1713787283 3910 50d59a869eb4a54730eb371412a8561a ""
   "uebung-meta.sty" 1713449946 179 d75e4895acf29c83f7176eb2761b875a ""
-  "uebung.cls" 1713449998 2670 07c8ede0b1b9aa304d6fac80f1871f83 ""
+  "uebung.cls" 1713785630 2670 07c8ede0b1b9aa304d6fac80f1871f83 ""
   (generated)
   "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.aux"
   "18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.log"
