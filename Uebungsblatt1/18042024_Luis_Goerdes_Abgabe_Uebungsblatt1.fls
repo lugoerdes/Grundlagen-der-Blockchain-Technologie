@@ -1,11 +1,11 @@
-PWD g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/vorlage
+PWD g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/vorlage/Uebungsblatt1
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/vorlage/18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.tex
+INPUT g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/vorlage/Uebungsblatt1/18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.tex
 OUTPUT 18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.log
-INPUT ./uebung.cls
-INPUT uebung.cls
+INPUT ../uebung.cls
+INPUT ../uebung.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/size11.clo
@@ -64,8 +64,8 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT ./uebung-meta.sty
-INPUT uebung-meta.sty
+INPUT ../uebung-meta.sty
+INPUT ../uebung-meta.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
@@ -153,11 +153,11 @@ OUTPUT 18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.out
 OUTPUT 18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.pdf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
-INPUT ./Abbildungen/Uebungsblatt1.png
-INPUT ./Abbildungen/Uebungsblatt1.png
-INPUT ./Abbildungen/Uebungsblatt1.png
-INPUT ./Abbildungen/Uebungsblatt1.png
-INPUT ./Abbildungen/Uebungsblatt1.png
+INPUT ./Uebungsblatt1.png
+INPUT ./Uebungsblatt1.png
+INPUT ./Uebungsblatt1.png
+INPUT ./Uebungsblatt1.png
+INPUT ./Uebungsblatt1.png
 INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT 18042024_Luis_Goerdes_Abgabe_Uebungsblatt1.aux
