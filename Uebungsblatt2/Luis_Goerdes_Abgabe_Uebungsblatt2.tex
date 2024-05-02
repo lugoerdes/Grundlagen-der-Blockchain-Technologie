@@ -30,7 +30,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics*[scale=.5]{Kollisionsresistent.png}
-		\caption{Kollisionsresistent schwach}
+		\caption{Kollisionsresistent Schwach}
 	\end{figure}\\
 	\begin{figure}[h]
 		\centering
@@ -38,20 +38,30 @@
 		\caption{Kollisionsresistent Stark}
 	\end{figure}\\
 	\textbf{a) \(h(x) = x \mod 7\)}\\
-	\textbf{Komprimierung:}
+	\textbf{Komprimierung:}\\
 	Ist erfüllt, da wir durch das Modulo 7, egal wie hoch die Eingabe ist, eine Zahl zwischen 0 und 6 erhalten werden.\\
-	\textbf{Fast nie injektiv:}
+	\textbf{Fast nie injektiv:}\\
 	Ist erfüllt, die mögliche Definitionsmenge (=\(\infty\)) ist für diese Funktion als größer anzusehen, verglichen mit der Zielmenge (0,1,2,3,4,5,6).\\
-	\textbf{Schnell berechenbar:}
-	Da es sich beim Modulo um eine einfache Rechenoperation handelt, ist diese auch schnell berechenbar.\\
+	\textbf{Schnell berechenbar:}\\
+	Ist erfüllt, da es sich beim Modulo um eine einfache Rechenoperation handelt, ist diese auch schnell berechenbar.\\
+	Da wir gezeigt haben, dass es sich um eine Hashfunktion handelt, müssen wir nur noch die Kriterien für eine kryptografische Hashfunktion prüfen.\\
+	\textbf{Einweg-Eigenschaft:}\\
+	Ist nicht erfüllt, es ist möglich die Funktion umzukehren, um dann durch Ausprobieren zum x zu gelangen. Die Funktion dazu lautet \(\)
+	\textbf{Kollisionsresitent Schwach:}\\
+	\textbf{Kollisionsresistent Stark:}\\
 	\textbf{b) \[g(x) = x mod 12\]}\\
-	\textbf{Komprimierung:}
-	Ist erfüllt, da wir durch das Modulo 7, egal wie hoch die Eingabe ist eine Zahl zwischen 0 und 6 erhalten werden.
-	\textbf{Fast nie injektiv:}
-	Ist erfüllt, die mögliche Definitionsmenge (=\(\infty\)) ist für diese Funktion als größer anzusehen, verglichen mit der Zielmenge (Zahlen zwischen 0 und 11).
-	\textbf{Schnell berechenbar:}
-	Da es sich beim Modulo um eine einfache Rechenoperation handelt, ist diese auch schnell berechenbar.
-\end{exercise}
+	Zunächst überprüfen wir, ob es sich bei der Funktion um eine Hashfunktion handelt. Dazu betrachten wir die oben beschriebenen Kriterien.\\
+	\textbf{Komprimierung:}\\
+	Ist erfüllt, da wir durch das Modulo 7, egal wie hoch die Eingabe ist eine Zahl zwischen 0 und 6 erhalten werden.\\
+	\textbf{Fast nie injektiv:}\\
+	Ist erfüllt, die mögliche Definitionsmenge (=\(\infty\)) ist für diese Funktion als größer anzusehen, verglichen mit der Zielmenge (Zahlen zwischen 0 und 11).\\
+	\textbf{Schnell berechenbar:}\\
+	Ist erfüllt, da es sich beim Modulo um eine einfache Rechenoperation handelt, ist diese auch schnell berechenbar.
+	Da wir gezeigt haben, dass es sich um eine Hashfunktion handelt, müssen wir nur noch die Kriterien für eine kryptografische Hashfunktion prüfen.\\
+	\textbf{Einweg-Eigenschaft:}\\
+	\textbf{Kollisionsresitent Schwach:}\\
+	\textbf{Kollisionsresistent Stark:}\\
+\end{exercise}\\
 
 \begin{exercise}{2}
 \end{exercise}
