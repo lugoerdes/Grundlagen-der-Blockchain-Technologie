@@ -1,15 +1,15 @@
 import hashlib
+import time
+startTime = time.time()
 puzzleID = 'BBSE_E01'
 d = '0000'
-x = 0
+iteration = 0
 
 while(True):
-    print(x)
-    r=puzzleID+str(x)
-    r=r.encode()
-    r=hashlib.sha256(r).hexdigest()
-    print(r)
-    if (r[:4]==d):
+    hash=puzzleID+str(iteration)
+    hash=hash.encode()
+    hash=hashlib.sha256(hash).hexdigest()
+    if (hash[:4]==d):
         break
-    x+=1
-print('x: '+str(x)+' Hash: ' +str(r))
+    iteration+=1
+print('Iterationen: '+str(iteration)+' Hash: ' +str(hash)+' Time: '+ str(time.time()-startTime))

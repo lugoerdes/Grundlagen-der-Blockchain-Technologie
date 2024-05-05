@@ -7,6 +7,7 @@
 	urlcolor=blue,
 	linkcolor=green
 ]{hyperref}
+\usepackage{listings}
 
 \assignment{2}
 
@@ -24,18 +25,8 @@
     Im Anschluss betrachten wir die erweiterte Definition aus der Vorlesung für kryptografische Hashfunktionen, die aus folgenden Eigenschaften besteht:\\
     \begin{figure}[h]
         \centering
-        \includegraphics*[scale=.5]{EinwegEigenschaft.png}
-        \caption{Einweg-Eigenschaft}
-    \end{figure}\\
-    \begin{figure}[h]
-        \centering
-        \includegraphics*[scale=.5]{Kollisionsresistent.png}
-        \caption{Kollisionsresistent Schwach}
-    \end{figure}\\
-    \begin{figure}[h]
-        \centering
-        \includegraphics*[scale=.5]{KollisionsresistentStark.png}
-        \caption{Kollisionsresistent Stark}
+        \includegraphics*[scale=.5]{kryptoEIgenschaftenKompakt.png}
+        \caption{Deinition kryptografische Hashfunktionen}
     \end{figure}\\
     \textbf{a) \(h(x) = x \mod 7\)}\\
     \textbf{Komprimierung:}\\
@@ -51,7 +42,8 @@
     Ist nicht erfüllt, zu einem gegebenen \(x\), lässt sich einfach ein \(y\) finden, zu dem gilt \(x \neq y\) und \(h(x)=h(y)\). Nehmen wir ein Beispiel. \(h(12)=12 \mod 7= 5\) finden wir viele beliebige \(x\), die zum selben Ergebnis führen. Durch folgende Funktion finden wir sehr einfach sehr viele \(x\) die zum gleichen Ergebnis führen: \(f(n)=5+n*7\).\\
     \textbf{Kollisionsresistent Stark:}\\
     Auch hier können wir eine einfache Kombination aus \(x\) und \(y\) finden, bei der gilt \(x \neq y\) und \(h(x)=h(y)\). Auch hier können wir beispielhaft die Funktion \(f(n)=5+n*7\) verwenden. Mithilfe der Funktion können wir beliebig viele x berechnen, sodass gilt \(h(x)=h(y)\) (beispielsweise \(x=12\) und \(y=19\)).\\
-    \textbf{b) \(g(x) = x mod 12\)}\\
+    Dadurch das diese Eigenschaften nicht erfüllt sind, können wir daraus schließen, dass es sich bei der Funktion zwar um eine Hashfunktion, aber \textbf{nicht} um eine kryptografische Hashfunktion handelt.\\
+    \textbf{b) \(g(x) = x \mod 12\)}\\
     Zunächst überprüfen wir, ob es sich bei der Funktion um eine Hashfunktion handelt. Dazu betrachten wir die oben beschriebenen Kriterien.\\
     \textbf{Komprimierung:}\\
     Ist erfüllt, da wir durch das Modulo 7, egal wie hoch die Eingabe ist eine Zahl zwischen 0 und 6 erhalten werden.\\
@@ -66,6 +58,7 @@
     Siehe Begründung in a).\\
     \textbf{Kollisionsresistent Stark:}\\
     Siehe Begründung in a).\\
+    Dadurch das diese Eigenschaften nicht erfüllt sind, können wir daraus schließen, dass es sich bei der Funktion zwar um eine Hashfunktion, aber \textbf{nicht} um eine kryptografische Hashfunktion handelt.
 \end{exercise}\\
 
 \begin{exercise}{2}
@@ -77,16 +70,43 @@
 \begin{exercise}{3}
     Alice und Bob wählen beide ihre Option. Beide können dann eine Hashfunktion \(h_j=h(Option_j)\). Da es lediglich drei Optionen gibt, wäre dies einfach durch Brute-Forcing zu knacken. Durch das Hinzufügen eines Salts vor dem hashen durch beispielsweise eine Zufallszahl kann dieses Problem gelöst werden. Nachdem sie ihre Wahl offengelegt haben, kann der andere Spieler sicherstellen, dass der ursprüngliche Zug nicht verändert wurde, indem er den bekanntgegebenen Zug hasht und mit dem zuvor erhaltenen Hash vergleicht.\\
 \end{exercise}
-\begin{exercise}{4}
-    \textbf{a)}\\
-    \textbf{b)}\\
-    Da Computer A der schnellste ist gewinnt er, da er das Ziel von \(x=7852\) als erster erreicht.
-    \textbf{c)}\\
-    Um die Gewinnchance zu erhöhen, könnten die anderen Computer mithilfe einer anderen Strategie ihre Gewinnchance erhöhen.
-    \textbf{d)}\\
-\end{exercise}
-\begin{exercise}{5}
 
+\begin{exercise}{4}\textbf{a)}
+    Der Wert, um das Rätsel zu lösen ist: \[x=000072d930284346c3d54c5cda0306900078c9be695b24d899d5ebeb2057ebcf\] Dafür wurden 7852 Iterationen benötigt die in 0.016466617584228516s durchgeführt wurden.\\
+    Das Suchrätsel wurde in Python entwickelt. Folgend ist der Code abgebildet:
+    \begin{lstlisting}[language=Python]
+        import hashlib 
+        import time 
+        startTime = time.time() 
+        puzzleID = 'BBSE_E01' 
+        d = '0000'
+        iteration = 0
+        
+        while(True):
+            hash=puzzleID+str(iteration)
+            hash=hash.encode()
+            hash=hashlib.sha256(hash).hexdigest()
+            if (hash[:4]==d):
+                break
+            iteration+=1
+        print('Iterationen: '+str(iteration)+' Hash: ' +str(hash)+' Time: '+ str(time.time()-startTime))
+    \end{lstlisting}
+    \textbf{b)}\\
+    Da Computer A der schnellste ist, dadurch dass er mehr Hashes in der Sekunde ausführen kann, gewinnt er, da er das Ziel von \(x=7852\) als erster erreicht.\\
+    \textbf{c)}\\
+    Um die Gewinnchance zu erhöhen, könnten die anderen Computer mithilfe einer anderen Strategie ihre Gewinnchance erhöhen. Beispielsweise könnten die Anderen Computer versuchen bei einem anderen \(x\) zu starten. So wären Sie zu beginn schon näher an der Lösung.\\
+    \textbf{d)}\\
+    Man könnte das Rätsel Hashing-Leistungsabhängig gestalten. Demnach wäre der Gewinner nicht derjenige Computer, welcher das Rätsel in kürzester Zeit löst, sondern immer auch abhängig von der Hashing-Leistung. Beispielsweise, wenn A das Rätsel in einer Sekunde löst und B das Rätsel in einer Sekunde löst, dann wäre kein gleichstand, sondern B hätte gewonnen, da dieser weniger Hashing-Leistung hat und für das gleiche Rätsel mehr Zeit bekommt.
+    Man könnte auch das Rätsel so gestalten, dass die Computer nur eine gewisse Anzahl an Versuchen bekommen, um das Rätsel zu lösen. Dadurch würde derjenige Computer gewinnen, welcher die Effizienteste Methode zur Lösung vorweisen kann und nicht der mit der schnellsten Hash-Leistung.\\
+\end{exercise}\\
+
+\begin{exercise}{5}
+    Folgend würde ich den Merkle Tree mit 5 Blättern aufbauen:
+    \begin{figure}[h]
+        \centering
+        \includegraphics*[scale=.5]{MerkleTree.png}
+        \caption{Merkle Tree mit 5 Blättern}
+    \end{figure}\\
 \end{exercise}
 
 \end{document}

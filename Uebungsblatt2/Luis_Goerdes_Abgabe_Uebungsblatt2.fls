@@ -121,6 +121,17 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT c:/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT c:/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 INPUT c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./Luis_Goerdes_Abgabe_Uebungsblatt2.aux
@@ -159,21 +170,11 @@ INPUT ./Definition Hashfunktion.png
 INPUT ./Definition Hashfunktion.png
 INPUT ./Definition Hashfunktion.png
 INPUT ./Definition Hashfunktion.png
-INPUT ./EinwegEigenschaft.png
-INPUT ./EinwegEigenschaft.png
-INPUT ./EinwegEigenschaft.png
-INPUT ./EinwegEigenschaft.png
-INPUT ./EinwegEigenschaft.png
-INPUT ./Kollisionsresistent.png
-INPUT ./Kollisionsresistent.png
-INPUT ./Kollisionsresistent.png
-INPUT ./Kollisionsresistent.png
-INPUT ./Kollisionsresistent.png
-INPUT ./KollisionsresistentStark.png
-INPUT ./KollisionsresistentStark.png
-INPUT ./KollisionsresistentStark.png
-INPUT ./KollisionsresistentStark.png
-INPUT ./KollisionsresistentStark.png
+INPUT ./kryptoEIgenschaftenKompakt.png
+INPUT ./kryptoEIgenschaftenKompakt.png
+INPUT ./kryptoEIgenschaftenKompakt.png
+INPUT ./kryptoEIgenschaftenKompakt.png
+INPUT ./kryptoEIgenschaftenKompakt.png
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -199,6 +200,16 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
+INPUT ./MerkleTree.png
+INPUT ./MerkleTree.png
+INPUT ./MerkleTree.png
+INPUT ./MerkleTree.png
+INPUT ./MerkleTree.png
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT Luis_Goerdes_Abgabe_Uebungsblatt2.aux
 INPUT ./Luis_Goerdes_Abgabe_Uebungsblatt2.out
 INPUT ./Luis_Goerdes_Abgabe_Uebungsblatt2.out
