@@ -204,11 +204,11 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
-INPUT ./MerkleTree.png
-INPUT ./MerkleTree.png
-INPUT ./MerkleTree.png
-INPUT ./MerkleTree.png
-INPUT ./MerkleTree.png
+INPUT ./MerkleTreeReal.png
+INPUT ./MerkleTreeReal.png
+INPUT ./MerkleTreeReal.png
+INPUT ./MerkleTreeReal.png
+INPUT ./MerkleTreeReal.png
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT Luis_Goerdes_Abgabe_Uebungsblatt2.aux
 INPUT ./Luis_Goerdes_Abgabe_Uebungsblatt2.out
