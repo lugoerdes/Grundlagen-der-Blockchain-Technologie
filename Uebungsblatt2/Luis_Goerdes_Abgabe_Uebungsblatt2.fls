@@ -64,8 +64,8 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT ../uebung-meta.sty
-INPUT ../uebung-meta.sty
+INPUT ./uebung-meta.sty
+INPUT uebung-meta.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
