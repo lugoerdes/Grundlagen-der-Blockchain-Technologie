@@ -72,28 +72,28 @@
 \end{exercise}
 
 \begin{exercise}{4}\textbf{a)}
-    Der Wert, um das Rätsel zu lösen ist: \[x=000072d930284346c3d54c5cda0306900078c9be695b24d899d5ebeb2057ebcf\] Dafür wurden 7852 Iterationen benötigt die in 0.016466617584228516s durchgeführt wurden.\\
+    Der Wert, um das Rätsel zu lösen ist: \[x=0000f03052da432dae2eb04d0b2099e86e9ca8c2ba64b17e4c0accb1850516f1\] Dafür wurden 834961 Iterationen benötigt die in 3.3620524406433105s durchgeführt wurden.\\
     Das Suchrätsel wurde in Python entwickelt. Folgend ist der Code abgebildet:
     \begin{lstlisting}[language=Python]
         import hashlib 
         import time 
         startTime = time.time() 
         puzzleID = 'BBSE_E01' 
-        d = '0000'
+        d = '0000f'
         iteration = 0
         
         while(True):
             hash=puzzleID+str(iteration)
             hash=hash.encode()
             hash=hashlib.sha256(hash).hexdigest()
-            if (hash[:4]==d):
+            if (hash[:5]==d):
                 break
             iteration+=1
         print('Iterationen: '+str(iteration)+' Hash: ' +str(hash)+
         'Time: '+ str(time.time()-startTime))
     \end{lstlisting}
     \textbf{b)}\\
-    Da Computer A der schnellste ist, dadurch dass er mehr Hashes in der Sekunde ausführen kann, gewinnt er, da er das Ziel von \(x=7852\) als erster erreicht.\\
+    Da Computer A der schnellste ist, dadurch dass er mehr Hashes in der Sekunde ausführen kann, gewinnt er, da er das Ziel als erster erreicht.\\
     \textbf{c)}\\
     Um die Gewinnchance zu erhöhen, könnten die anderen Computer mithilfe einer anderen Strategie ihre Gewinnchance erhöhen. Wenn Sie beispielsweise nach jeder Iteration eine Zufallszahl als Iterationsfaktor nehmen \(iteration=RandomZahl()\). Da A in jedem Fall, wenn es sich um eine lineare Strategie handelt, wie bei \(x=x+1\) gewinnt, und die Gewinnchance bei B und C bei der Verwendung der Strategie bei null liegt, wird die Gewinnchance durch Zufallszahlen vergrößert. \\
     \textbf{d)}\\

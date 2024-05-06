@@ -2,7 +2,7 @@ import hashlib
 import time
 startTime = time.time()
 puzzleID = 'BBSE_E01'
-d = '0000'
+d = '0000f'
 iteration = 0
 
 while(True):
