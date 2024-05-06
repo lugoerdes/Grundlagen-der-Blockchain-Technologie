@@ -9,7 +9,7 @@ while(True):
     hash=puzzleID+str(iteration)
     hash=hash.encode()
     hash=hashlib.sha256(hash).hexdigest()
-    if (hash[:4]==d):
+    if (hash[:5]==d):
         break
     iteration+=1
 print('Iterationen: '+str(iteration)+' Hash: ' +str(hash)+' Time: '+ str(time.time()-startTime))
