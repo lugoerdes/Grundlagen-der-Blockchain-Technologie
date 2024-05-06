@@ -1,0 +1,31 @@
+INFO:  ANSI Code Page: 1252
+INFO:  latexindent.exe version 3.23.9, 2024-04-06, a script to indent .tex files
+       latexindent.exe lives here: C:/texlive/2024/bin/windows/
+       Mon May  6 13:25:02 2024
+       Filename: g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/Abgaben_Blockchain_Technologie/Uebungsblatt2/__latexindent_temp_uebung-meta.sty
+INFO:  Processing switches:
+       -y|--yaml: YAML settings specified via command line
+       -c|--cruft: cruft directory
+INFO:  Directory for backup files and g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/Abgaben_Blockchain_Technologie/Uebungsblatt1//indent.log:
+       g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/Abgaben_Blockchain_Technologie/Uebungsblatt1/
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from C:/texlive/2024/bin/windows/defaultSettings.yaml
+       Reading defaultSettings.yaml (2nd attempt) from C:/texlive/2024/bin/windows/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
+       and then, if necessary, C:/texlive/2024/bin/windows/LatexIndent/defaultSettings.yaml
+INFO:  YAML reading settings
+       Home directory is C:\Users\luisg
+       latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
+       see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
+INFO:  YAML settings read: -y switch
+       YAML setting: defaultIndent:'    '
+       single-quoted string found in -y switch: '    ', substitute to     
+       Updating mainSettings with defaultIndent:     
+INFO:  Phase 1: searching for objects
+INFO:  Phase 2: finding surrounding indentation
+INFO:  Phase 3: indenting objects
+INFO:  Phase 4: final indentation check
+INFO:  Output routine:
+       Not outputting to file; see -w and -o switches for more options.
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl
