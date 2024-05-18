@@ -1,0 +1,138 @@
+\documentclass[german]{../uebung}
+
+\usepackage{uebung-meta}
+\usepackage{graphicx}
+\usepackage[
+	colorlinks=true,
+	urlcolor=blue,
+	linkcolor=green
+]{hyperref}
+\usepackage{listings}
+
+\assignment{3}
+
+
+\begin{document}
+
+\begin{exercise}{1}
+
+    \textbf{a)}
+    Siehe Abbildung 1-3:
+    \begin{figure}[h]
+        \centering
+        \includegraphics*[scale=.5]{VerbindungZurBlockchain.png}
+        \caption{Verbindung zur Blockchain}
+    \end{figure}\\
+    \begin{figure}[h]
+        \centering
+        \includegraphics*[scale=.5]{VerbindungErfolgreich.png}
+        \caption{Verbindung zur Node 1}
+    \end{figure}\\
+    \begin{figure}[h]
+        \centering
+        \includegraphics*[scale=.5]{Verbindung2.png}
+        \caption{Verbindung zur Node 2}
+    \end{figure}
+
+    \textbf{b)}
+    293 zu Beginn
+    2048322 heute
+
+
+    \textbf{c)}
+    ID von Block 21: 099027aad3ce9e733b4cc326ef85aae6471a99c83e6e9457fca730a357f63337
+
+    \textbf{d)}
+    Text im Block 2100: Gründlagen der Blockchain-Technologie: öbungsaufgabe
+
+    \textbf{e)}
+
+    \textbf{f)}
+
+\end{exercise}
+
+\begin{exercise}{2}
+
+    \textbf{a)}
+    \(p_1: 61, p_2: 97, q_1: 23, q_2: 29 [1; 100]\)\\
+    Zum Verschlüsseln müssen wir zunächst \(n=p_1*q_1=61*23=1403\) berechnen.
+    Wir berechnen ausserdem: \(\phi(n)=(p_1-1)*(q_1-1)=60*22=1320\).
+    Nun wählen wir eine Zahl \(e_1\), die teilerfremd zu \(\phi\) ist. Die Zahl 7 ist teilerfremd, weshalb wir diese verwenden werden.
+    Nun bestimmen wir ein \(d_1\), sodass \(e_1*d_1 \equiv 1 \mod \phi(n) \) gilt -> (943).
+
+    \textbf{b)}
+    Berechnung zur Signierung: \(n=p_2*q_2=97*29=2813\)
+    Wir berechnen ausserdem: \(\phi(n)=(p_2-1)*(q_2-1)=96*28=2688\). Als teilerfremde Zahl verwenden wir diesmal \(e_2=5\). So kommen wir auf ein \(d_2=1613\). Betrachten wir nun die Verschlüsselung und die Signatur:
+    \[c=m^{e_1} \mod n_1=3169^7 \mod 1403= 558\]
+    \[m=c^{d_1} \mod n_1=558^{943} \mod 1403= 363\]
+    \[sig=m^{d_2} \mod n_2=3169^{1613} \mod 2813= 677\]
+    \[m=sig^{e_2} \mod n_2=677^5 \mod 2813= 356\]
+
+\end{exercise}
+
+\begin{exercise}{3}
+
+    \textbf{a)}
+    Ja
+
+    \textbf{b)}
+    Ja
+
+    \textbf{c)}
+    Ja
+
+    \textbf{d)}
+    Ja
+
+    \textbf{e)}
+    Ja
+
+    \textbf{f)}
+    Nein
+\end{exercise}
+
+\begin{exercise}{4}
+
+    \textbf{a)}
+    Gültig. Alice 7, Bob 12, Carol 6.
+
+    \textbf{b)}
+    Ungültig. Bei Tx3 hat Txin gerade einmal 12,5 coins, es sollen aber 14,5 rausgehen (Txout).
+
+    \textbf{c)}
+    Gültig. Alice 6, Bob 9, Carol 7. Man könnte meinen es wäre ungültig, da die Transaktionen Tx1 und Tx2 jeweils nicht den vollen Betrag ausnutzen von dem ursprüunglichen Txin, man kann aber davon ausgehen, dass es sich um die restlichen Coins um transaktionskosten gehandelt haben muss.
+
+    \textbf{d)}
+    Ungültig. Bei Tx2 Signiert Bob die Transaktion, obwohl Txin: 1[1] zu Alice gehört.
+\end{exercise}
+
+\begin{exercise}{5}
+
+    \textbf{a)}
+    595.19 EH/s (SHA-256)
+
+    \textbf{b)}
+    612668; Quelle: \url{https://jochen-hoenicke.de/queue/#BTC,all,weight}
+
+    \textbf{c)}
+    Verschiedene Nodes haben verschiedene Sichtweisen auf die Chain und somit auch einen unterschiedlichen Blick auf die Anzahl unbestätigter Transaktionen.
+
+    \textbf{d)}
+
+    a) 57043
+
+    b) Sender: 1XPTgDRhN8RFnzniWCddobD9iKZatrvH4 Empfänger: 17SkEw2md5avVNyYgj6RiXuQKNwkXaxFyQ
+
+    c) 10.000,99 BTC | 100,00 USD -> Davon 0,99 BTC Miner FEE
+
+    d) Diese Transaktion ist bekannt als die erste real-life Transaktion, wo zwei Pizzas in BTC bezahlt wurden.
+\end{exercise}
+
+\begin{exercise}{6}
+    locktime: Feld in der Transaktion. Bestimmt frühsten Zeitpunkt oder Block, ab dem Transaktion gültig ist. Die Transaktion kann nicht in einen Block aufgenommen werden, bevor der Zeitpunkt oder Block erreicht ist. Dies kann verwendet werden, um Zahlungen zu verzögern oder um sicherzustellen, dass eine Transaktion nur unter bestimmten zeitlichen Bedingungen verarbeitet wird.\\
+    CHECKLOCKTIMEVERIFY: Wird in einem Bitcoin-Transaktionsskript verwendet. Ermöglich dem Skript, die Gültigkeit einer Transaktion basierend auf Zeit- oder Blockparameter zu überprüfen. Es muss demnach nicht die gesamte Transaktion bis zu einem Zeitpunkt oder Block gesperrt werden.\\
+    Beispiele: Man könnte sicherstellen, dass eine Zahlung erst nach einem bestimmten Datum oder Block erfolgt (bspw. Daueraufträge od. Vertragszahlungen). <- locktime\\
+    CHECKLOCKTIMEVERIFY ermöglicht die Erstellung von Bedingungen, die erfüllt sein müssen, bevor Gelder freigegeben werden (Smart Contracts).
+\end{exercise}
+
+\end{document}
