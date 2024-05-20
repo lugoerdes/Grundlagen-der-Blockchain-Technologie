@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.15)  20 MAY 2024 23:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.15)  20 MAY 2024 23:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -427,10 +427,6 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/03/11 1.10a listings language file
 )
-Overfull \hbox (23.33412pt too wide) in paragraph at lines 58--59
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 25.89063pt, for example:
@@ -441,18 +437,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./VerbindungZurBlockchain.png> <./VerbindungErfolgreich.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 25.89063pt, for example:
@@ -461,25 +461,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-13.89063pt}.
 
 [2 <./Verbindung2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-
- []
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 150.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 143.
 (c:/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Overfull \hbox (93.77309pt too wide) in paragraph at lines 159--160
+Overfull \hbox (93.77309pt too wide) in paragraph at lines 152--153
 []\T1/cmr/m/n/10.95 b) Sen-der: 1XPTgD-RhN8RFnzniWCddobD9iKZatrvH4 Emp-fän-ger: 17SkEw2md5avVNyYgj6RiXuQKNwkXaxFyQ 
  []
 
@@ -490,15 +485,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-13.89063pt}.
 
-[3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 25.89063pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.89063pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-13.89063pt}.
-
-[4] 
+[3] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./Luis_Goerdes_Abgabe_Uebungsblatt3.aux)
  ***********
@@ -509,18 +496,18 @@ Package rerunfilecheck Info: File `Luis_Goerdes_Abgabe_Uebungsblatt3.out' has no
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12813 strings out of 474104
- 190778 string characters out of 5747502
- 1960496 words of memory out of 5000000
- 34975 multiletter control sequences out of 15000+600000
+ 12788 strings out of 474104
+ 190461 string characters out of 5747502
+ 1950496 words of memory out of 5000000
+ 34958 multiletter control sequences out of 15000+600000
  566464 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,12n,79p,745b,2111s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on Luis_Goerdes_Abgabe_Uebungsblatt3.pdf (4 pages, 503906 bytes).
+Output written on Luis_Goerdes_Abgabe_Uebungsblatt3.pdf (3 pages, 502045 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 30 named destinations out of 1000 (max. 500000)
  34 words of extra memory for PDF output out of 10000 (max. 10000000)
 

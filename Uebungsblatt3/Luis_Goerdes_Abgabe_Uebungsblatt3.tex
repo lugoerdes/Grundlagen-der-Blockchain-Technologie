@@ -52,13 +52,6 @@
     Das Skript wurde als Powershell-Skript entwickelt:
     \begin{lstlisting}[language=Python]
 $blockCount = .\bitcoin-cli -regtest getblockcount
-function Convert-HexToAscii($hexString) {
-    $bytes = [byte[]]::new($hexString.Length / 2)
-    for ($i = 0; $i -lt $bytes.Length; $i++) {
-        $bytes[$i] = [Convert]::ToByte($hexString.Substring($i * 2, 2), 16)
-    }
-    [System.Text.Encoding]::ASCII.GetString($bytes)
-}
 for ($i = 0; $i -le $blockCount; $i++) {
     $blockHash = .\bitcoin-cli -regtest getblockhash $i
     $block = .\bitcoin-cli -regtest getblock $blockHash
