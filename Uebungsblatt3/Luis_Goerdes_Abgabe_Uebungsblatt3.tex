@@ -35,8 +35,8 @@
     \end{figure}
 
     \textbf{b)}
-    293 zu Beginn
-    2048322 heute
+    293 Bytes zu Beginn
+    2048322 Bytes heute
 
 
     \textbf{c)}
@@ -48,6 +48,41 @@
     \textbf{e)}
 
     \textbf{f)}
+
+    Das Skript wurde als Powershell-Skript entwickelt:
+    \begin{lstlisting}[language=Python]
+$blockCount = .\bitcoin-cli -regtest getblockcount
+function Convert-HexToAscii($hexString) {
+    $bytes = [byte[]]::new($hexString.Length / 2)
+    for ($i = 0; $i -lt $bytes.Length; $i++) {
+        $bytes[$i] = [Convert]::ToByte($hexString.Substring($i * 2, 2), 16)
+    }
+    [System.Text.Encoding]::ASCII.GetString($bytes)
+}
+for ($i = 0; $i -le $blockCount; $i++) {
+    $blockHash = .\bitcoin-cli -regtest getblockhash $i
+    $block = .\bitcoin-cli -regtest getblock $blockHash
+    $convBlock = $block | ConvertFrom-Json
+    foreach ($txid in $convBlock.tx) {
+        $txDetails = .\bitcoin-cli -regtest getrawtransaction $txid 1
+        $convTxDetails = $txDetails | ConvertFrom-Json
+        foreach($vout in $convTxDetails.vout) {
+        $scriptPubKey = $vout.scriptPubKey
+            if ($scriptPubKey -and $scriptPubKey.asm){
+                if($scriptPubKey.hex -match '1[0-9a-fA-F]+'){
+                    $pubKeys = $scriptPubKey.asm -split " "
+                    Write-Output "Oeffentlicher Schluessel: $pubKeys"
+                }
+            }
+        }
+    }
+}
+
+        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+        Write-Output "Skript ausgefuehrt am: $timestamp"
+
+
+    \end{lstlisting}
 
 \end{exercise}
 
