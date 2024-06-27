@@ -1,7 +1,10 @@
 import binascii
 from decimal import Decimal
+import decimal
+import json
 import string
 from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
+import requests
 
 # RPC-Zugangsdaten (anpassen)
 rpc_user = "kuhmist123"
@@ -68,7 +71,7 @@ def getListaddressgroupings():
     listaddressgroupings = rpc_connection.listaddressgroupings() 
     print("Listaddressgroupings: " , listaddressgroupings) 
 
-#ALT def saveTextToTransaction(text,to_address, change_address, amount):
+# ALT def saveTextToTransaction(text,to_address, change_address, amount):
 #     try:
 #          # Text in Hex umwandeln
 #         hex_data = binascii.hexlify(text.encode('utf-8')).decode('utf-8')
@@ -81,8 +84,7 @@ def getListaddressgroupings():
 
 #         # Die Ausgaben der Transaktion
 #         total_utxo_amount = sum(Decimal(utxo['amount']) for utxo in utxos)
-#         outputs = {to_address: Decimal(amount), change_address: total_utxo_amount - Decimal(amount) - Decimal(
-#             "0.0001")}  # Sende den Rest an die change_address abzüglich einer kleinen Gebühr
+#         outputs = {to_address: Decimal(amount), change_address: total_utxo_amount - Decimal(amount)}  # Sende den Rest an die change_address abzüglich einer kleinen Gebühr
 
 #         # OP_RETURN Output hinzufügen
 #         outputs["data"] = hex_data
@@ -119,74 +121,65 @@ def send_transaction(to_address, amount):
      except JSONRPCException as e:
         print(f"Fehler beim Senden der Transaktion: {e}")
 
-#NEU def saveTextToTransaction(text,empfaenger_adresse, betrag):
+# def saveTextToTransaction(text, to_address, change_address, amount, fee):
 #     try:
-#         # OP_RETURN-Daten vorbereiten
-#         op_return_data = binascii.hexlify(text.encode('utf-8')).decode('utf-8')
+#         # Text in Hex umwandeln
+#         hex_data = binascii.hexlify(text.encode('utf-8')).decode('utf-8')
         
-#         # Transaktionseingänge und -ausgänge vorbereiten
-#         inputs = [{"txid": utxo['txid'], "vout": utxo['vout']} for utxo in utxos]
-#         outputs = {empfaenger_adresse: betrag, 'data': op_return_data}
-        
-#         # Wechselgeld berechnen
-#         wechselgeld = gesamtbetrag - betrag
-#         if wechselgeld > 0:
-#             outputs[rpc_connection.getrawchangeaddress()] = wechselgeld
-        
-#         # Transaktion erstellen
+#         # UTXOs (Unspent Transaction Outputs) auflisten
+#         utxos = rpc_connection.listunspent()
+#         print(utxos)
+
+#         # Die UTXOs für die Eingaben auswählen
+#         inputs = []
+#         total_utxo_amount = Decimal(0)
+#         for utxo in utxos:
+#             inputs.append({"txid": utxo["txid"], "vout": utxo["vout"]})
+#             total_utxo_amount += Decimal(utxo['amount'])
+#             if total_utxo_amount >= Decimal(amount) + Decimal(fee):
+#                 break
+
+#         if total_utxo_amount < Decimal(amount) + Decimal(fee):
+#             raise Exception("Nicht genügend Guthaben für die Transaktion verfügbar")
+
+#         # Die Ausgaben der Transaktion
+#         outputs = {to_address: Decimal(amount)}
+#         change_amount = total_utxo_amount - Decimal(amount) - Decimal(fee)
+#         if change_amount > 0:
+#             outputs[change_address] = change_amount
+
+#         # OP_RETURN Output hinzufügen
+#         outputs["data"] = hex_data
+
+#         # Erstellen der Rohtransaktion
 #         raw_tx = rpc_connection.createrawtransaction(inputs, outputs)
-        
-#         # Transaktion signieren
+
+#         # Signieren der Rohtransaktion
 #         signed_tx = rpc_connection.signrawtransactionwithwallet(raw_tx)
-        
-#         # Transaktion senden
-#         txid = rpc_connection.sendrawtransaction(signed_tx['hex'])
-        
-#         return f"Transaktion erfolgreich gesendet! TXID: {txid}", txid
+
+#         if not signed_tx.get("complete"):
+#             raise Exception("Transaktion konnte nicht signiert werden")
+
+#         # Senden der signierten Transaktion
+#         tx_id = rpc_connection.sendrawtransaction(signed_tx["hex"])
+
+#         print(f"Transaktion erfolgreich gesendet! Transaktions-ID: {tx_id}")
+#         return tx_id
+
 #     except JSONRPCException as e:
-#         return f"Fehler beim Senden der Transaktion: {e}", None
-
-def finde_op_return_transaktionen(rpc_connection):
-    try:
-        blockchain_info = rpc_connection.getblockchaininfo()
-        aktuelle_blockhoehe = blockchain_info['blocks']
-        op_return_transaktionen = []
-
-        for hoehe in range(0, aktuelle_blockhoehe + 1):
-            block_hash = rpc_connection.getblockhash(hoehe)
-            block = rpc_connection.getblock(block_hash, 2)  # 2: Block und Transaktionen als JSON
-            for tx in block['tx']:
-                for vout in tx['vout']:
-                    if 'scriptPubKey' in vout and vout['scriptPubKey']['type'] == 'nulldata':
-                        op_return_hex = vout['scriptPubKey']['asm'].split(' ')[1]
-                        try:
-                            op_return_data = binascii.unhexlify(op_return_hex).decode('utf-8')
-                            # Überprüfen, ob der Text lesbar ist (nur ASCII-Zeichen)
-                            if all(c in string.printable for c in op_return_data):
-                                op_return_transaktionen.append({
-                                    'txid': tx['txid'],
-                                    'block_height': hoehe,
-                                    'op_return_data': op_return_data
-                                })
-                        except (binascii.Error, UnicodeDecodeError):
-                            # Ignorieren, wenn die Hex-Daten nicht zu Klartext dekodiert werden können
-                            continue
-            print(f"Block {hoehe}/{aktuelle_blockhoehe} verarbeitet.")
-        
-        return op_return_transaktionen
-
-    except JSONRPCException as e:
-        print(f"Fehler beim Durchsuchen der Blockchain: {e}")
-        exit()
+#         print(f"Ein Fehler ist aufgetreten: {e}")
+#     except Exception as e:
+#         print(f"Ein Fehler ist aufgetreten: {e}")
 
 
 main()
-# Suche nach OP_RETURN-Transaktionen
-op_return_transaktionen = finde_op_return_transaktionen(rpc_connection)
 
-# Ausgabe der gefundenen Transaktionen
-for tx in op_return_transaktionen:
-    print(f"TXID: {tx['txid']}, Blockhöhe: {tx['block_height']}, OP_RETURN-Daten: {tx['op_return_data']}")
+# Suche nach OP_RETURN-Transaktionen
+# op_return_transaktionen = finde_op_return_transaktionen(rpc_connection)
+
+# # Ausgabe der gefundenen Transaktionen
+# for tx in op_return_transaktionen:
+#     print(f"TXID: {tx['txid']}, Blockhöhe: {tx['block_height']}, OP_RETURN-Daten: {tx['op_return_data']}")
 
 
 
@@ -195,4 +188,4 @@ for tx in op_return_transaktionen:
 # getwalletinfo()
 # # getTotalBalance()
 # text = "Dies ist ein Test."
-# saveTextToTransaction("Wenn ich Doctor wäre, wäre ich Doctor G.","bcrt1qejvcjrmfm9xg460wzuwnfsngl7x6nd64xf5vjf", 0.0001)
+saveTextToTransaction("Wenn ich Doctor wäre, wäre ich Doctor G.","bcrt1qejvcjrmfm9xg460wzuwnfsngl7x6nd64xf5vjf","bcrt1q6mtlmvn68am0p9c5xnm4gake0a9mhtxugcldk2", 0.01,0.0001)

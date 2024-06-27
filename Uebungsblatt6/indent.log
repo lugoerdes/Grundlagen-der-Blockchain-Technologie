@@ -1,0 +1,27 @@
+INFO:  ANSI Code Page: 1252
+INFO:  latexindent.exe version 3.23.9, 2024-04-06, a script to indent .tex files
+       latexindent.exe lives here: C:/texlive/2024/bin/windows/
+       Thu Jun 27 18:42:53 2024
+       Filename: g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/Abgaben_Blockchain_Technologie/Grundlagen-der-Blockchain-Technologie/Uebungsblatt6/__latexindent_temp_Luis_Goerdes_Abgabe_Uebungsblatt6.tex
+INFO:  Processing switches:
+       -y|--yaml: YAML settings specified via command line
+       -c|--cruft: cruft directory
+INFO:  Directory for backup files and g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/Abgaben_Blockchain_Technologie/Grundlagen-der-Blockchain-Technologie/Uebungsblatt6//indent.log:
+       g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/Abgaben_Blockchain_Technologie/Grundlagen-der-Blockchain-Technologie/Uebungsblatt6/
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from C:/texlive/2024/bin/windows/defaultSettings.yaml
+       Reading defaultSettings.yaml (2nd attempt) from C:/texlive/2024/bin/windows/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
+       and then, if necessary, C:/texlive/2024/bin/windows/LatexIndent/defaultSettings.yaml
+INFO:  YAML reading settings
+       Home directory is C:\Users\luisg
+       latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
+       see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
+INFO:  YAML settings read: -y switch
+       YAML setting: defaultIndent:'    '
+       single-quoted string found in -y switch: '    ', substitute to     
+       Updating mainSettings with defaultIndent:     
+FATAL I couldn't find g:/Meine Ablage/Studium/Master/Semester/1. Semester/Grundlagen der Blockchain-Technologie/Abgaben_Blockchain_Technologie/Grundlagen-der-Blockchain-Technologie/Uebungsblatt6/__latexindent_temp_Luis_Goerdes_Abgabe_Uebungsblatt6.tex, are you sure it exists?
+      Exiting, no indentation done.
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl
